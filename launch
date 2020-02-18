@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+function main {
+  local what && [ ! -z "$1" ] && what=$1 || what="help"
+
+  case "$what" in
+    "help")
+      echo "launch /path/to/launcher # launcher is a one-liner text file containing a URL or anything acceptable by xdg-open"
+    ;;
+    *)
+      read line < $what
+      echo "Launching $line"
+      xdg-open $line
+    ;;
+  esac
+}
+
+main ${@}
+
