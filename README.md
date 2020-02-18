@@ -1,5 +1,5 @@
 # launch
-Launch convinently, privately and securly
+Launch conveniently, privately and securely
 
 # Example
 First, set-up your launcher
